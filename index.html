@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="vendor/flickity.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="button-group">
+            <button class="button">Restart</button>
+        </div>
+        <div class="main-carousel" data-flickity='{ "hash": true }'>
+            <div class="carousel-cell" id="carousel-cell1">
+                <div class="container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a5/Bologna-San_Pietro_visto_dalla_Torre_degli_Asinelli.jpg)">Lorem impus</div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell2">
+                <div class="container" style="background-image: url(https://www.camprest.com/thumbnails/mainphoto/6d64c032-d34f-41c8-a507-924a3fe88207.jpg/1766x916/crop/a119e29013e4f5fad3e7803bb68c680e15ab788b.jpg)">Lorem impus</div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell3">
+                <div class="container" style="background-image: url(http://1.bp.blogspot.com/-fYZvUCcKIu0/Vl3jV9zKPBI/AAAAAAAAAyA/T-5MfMAM0Ss/s1600/170688_wenecja_kanal_mostek_budynki_gondole.jpg)">Lorem impus</div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell4">
+                <div class="container" style="background-image: url(http://rzym.pl/wp-content/themes/herald/assets/img/herald_default.jpg)">Lorem impus</div>
+            </div>
+            <div class="carousel-cell" id="carousel-cell5">
+                <div class="container" style="background-image: url(https://blog.bluesky.pl/wp-content/uploads/2017/09/w%C5%82ochy-neapol-wersja-blog.jpg)">Lorem impus</div>
+            </div>
+        </div>
+        <div class="progress-bar"></div>
+        <div class="view-hash">
+            <p>
+                <a href="#carousel-cell1">Cell 1</a>
+                <a href="#carousel-cell2">Cell 2</a>
+                <a href="#carousel-cell3">Cell 3</a>
+                <a href="#carousel-cell4">Cell 4</a>
+                <a href="#carousel-cell5">Cell 5</a>
+            </p>
+        </div>
+    </section>
+
+</body>
+<script src="vendor/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+</html>
