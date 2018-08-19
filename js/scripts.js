@@ -1,6 +1,7 @@
 "use strict";
 (function () {
 	
+    // Gallery slide carusel Flickity
     var elem = document.querySelector('.main-carousel');
     var flkty = new Flickity(elem, {
       // options
@@ -8,24 +9,16 @@
       hash: true,
       contain: true,
       freeScroll: true,
-      pageDots: false
-    });
-    
-    var flkty = new Flickity('.main-carousel', {
+      pageDots: false,
       groupCells: true
     });
-
-    var buttonGroup = document.querySelector('.button-group');
-    var buttons = buttonGroup.querySelectorAll('.button');
-    buttons = fizzyUIUtils.makeArray(buttons);
     
-    buttonGroup.addEventListener('click', function(event) {
-      // filter for button clicks
-      if ( !matchesSelector(event.target, '.button' )) {
-        return;
-      }
-      var index = buttons.indexOf( event.target );
-      flkty.selectCell(index);
+
+    // restart button 
+    var button = document.querySelector('.button');
+    
+    button.addEventListener('click', function(event) {
+      flkty.selectCell(0);
     });
     
 
