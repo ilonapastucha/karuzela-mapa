@@ -1,6 +1,24 @@
 "use strict";
 (function () {
+<<<<<<< HEAD
+
+  // Mustache template - gallery create
+
+  var gallery = document.getElementById('template-gallery').innerHTML;
+  var listItems = '';
+  var view = document.getElementById('carousel');
+  var elem = document.querySelector('.main-carousel');
+  
+  Mustache.parse(gallery);
+  
+    for (var i = 0; i < galleryData.length; i++) {
+      listItems += Mustache.render(gallery, galleryData[i]);
+    };
+  view.innerHTML = listItems;
+
+=======
 	
+>>>>>>> b2cd05b0c0eb53305f81828cf8b508d84743b496
     // Gallery slide carusel Flickity
     var elem = document.querySelector('.main-carousel');
     var flkty = new Flickity(elem, {
@@ -21,7 +39,7 @@
       flkty.selectCell(0);
     });
     
-
+    // pasek postempu
     var progressBar = document.querySelector('.progress-bar')
 
     flkty.on('scroll', function(progress) {

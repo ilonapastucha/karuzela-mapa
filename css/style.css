@@ -1,9 +1,13 @@
-.button { font-size: 22px; margin-top: 20px; }
+.button { font-size: 22px; margin-top: 20px; background-color: cadetblue; color: bisque; }
+
+.button :hover { background-color: bisque; color: cadetblue; }
 
 .button-group { margin-top: 20px; }
 
-.carousel-cell { width: 100%; /* full width */ height: 800px; /* height of carousel */ margin-right: 10px; }
+.carousel-cell { width: 100%; /* full width */ height: 80vh; /* height of carousel */ margin-right: 5px; -ms-flex-align: center; align-items: center; display: -ms-flexbox; display: flex; -o-object-fit: cover; object-fit: cover; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; background-size: cover; }
 
-.container { width: 100%; max-width: 1200px; height: 800px; margin: 0 auto; background-position: center; -o-object-fit: cover; object-fit: cover; }
+.container { width: 100%; max-width: 1200px; height: 70vh; margin: 0 auto; }
 
-.progress-bar { height: 10px; width: 0; background: #202020; }
+.container img { position: relative; -o-object-fit: cover; object-fit: cover; width: 100%; height: auto; display: block; }
+
+.progress-bar { height: 7px; width: 0; background: #202020; }
