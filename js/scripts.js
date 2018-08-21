@@ -1,6 +1,5 @@
 "use strict";
 (function () {
-<<<<<<< HEAD
 
   // Mustache template - gallery create
 
@@ -16,9 +15,6 @@
     };
   view.innerHTML = listItems;
 
-=======
-	
->>>>>>> b2cd05b0c0eb53305f81828cf8b508d84743b496
     // Gallery slide carusel Flickity
     var elem = document.querySelector('.main-carousel');
     var flkty = new Flickity(elem, {
