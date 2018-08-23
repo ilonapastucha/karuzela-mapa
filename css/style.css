@@ -4,6 +4,7 @@
 
 .button-group { margin-top: 20px; }
 
+<<<<<<< HEAD
 .carousel-cell { width: 100%; /* full width */ height: 80vh; /* height of carousel */ }
 
 .container { width: 100%; max-width: 1200px; height: 100%; margin: 0 auto; }
@@ -13,3 +14,12 @@
 .progress-bar { height: 7px; width: 0; background: #202020; }
 
 #map { height: 70vh; /* The height  */ max-width: 1200px; /* The width is the width of the web page */ width: 100%; margin: 0 auto; margin-top: 5px; }
+=======
+.carousel-cell { width: 100%; /* full width */ height: 80vh; /* height of carousel */ margin-right: 5px; -ms-flex-align: center; align-items: center; display: -ms-flexbox; display: flex; -o-object-fit: cover; object-fit: cover; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; background-size: cover; }
+
+.container { width: 100%; max-width: 1200px; height: 70vh; margin: 0 auto; }
+
+.container img { position: relative; -o-object-fit: cover; object-fit: cover; width: 100%; height: 100%; display: block; }
+
+.progress-bar { height: 7px; width: 0; background: #202020; }
+>>>>>>> a2e9cd05543a39cbd6c35f5df76c36750c594067
