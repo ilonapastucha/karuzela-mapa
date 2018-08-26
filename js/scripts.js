@@ -1,13 +1,22 @@
 "use strict";
 (function () {
 
-  // Mustache template - gallery create
 
   var gallery = document.getElementById('template-gallery').innerHTML;
   var listItems = '';
   var view = document.getElementById('carousel');
   var elem = document.querySelector('.main-carousel');
 
+  var coordinate = [{lat: 44.494263, lng: 11.346742},
+    {lat: 43.768061, lng: 11.253208},
+    {lat: 45.436059, lng: 12.325853},
+    {lat: 41.900848, lng: 12.483046},
+    {lat: 40.761685,lng: 14.030700}
+  ];
+
+  var markers = [];  
+
+// Mustache template - gallery create
   Mustache.parse(gallery);
 
   for (var i = 0; i < galleryData.length; i++) {
@@ -48,36 +57,42 @@
   });
 
 
-    // Initialize and add the map-poprawne
-   // window.initMap = function() {
-    // The location of Bologna Italy
-   // var italy = {lat: 44.494263, lng: 11.346742};
-    // The map, centered at Bologna Italy
-   // var map = new google.maps.Map(document.getElementById('map'), {zoom: 7, center: italy});
-    // The marker, positioned at Bologna
-   // var marker = new google.maps.Marker({position: italy, map: map});
-   // }
-    
-    var coordinate = [
-      {lat: 44.494263, lng: 11.346742},
-      {lat: 43.768061, lng: 11.253208},
-      {lat: 45.436059, lng: 12.325853},
-      {lat: 41.900848, lng: 12.483046},
-      {lat: 40.761685, lng: 14.030700}
-    ];
-    var markers = [];
+  // Initialize and add the map-poprawne
+  // window.initMap = function() {
+  // The location of Bologna Italy
+  // var italy = {lat: 44.494263, lng: 11.346742};
+  // The map, centered at Bologna Italy
+  // var map = new google.maps.Map(document.getElementById('map'), {zoom: 7, center: italy});
+  // The marker, positioned at Bologna
+  // var marker = new google.maps.Marker({position: italy, map: map});
+  // }
 
-    window.initMap = function() {
+
+
+  window.initMap = function () {
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: coordinate[0].lat, lng: coordinate[0].lng }, zoom: 7
+      center: {
+        lat: coordinate[0].lat,
+        lng: coordinate[0].lng
+      },
+      zoom: 7
     });
-    for (var i=0; i < coordinate.length; i++) {
+    for (var i = 0; i < coordinate.length; i++) {
       var lat = coordinate[i].lat;
       var lng = coordinate[i].lng;
       markers[i] = new google.maps.Marker({
-        position: {lat: lat, lng: lng}, map: map
+        position: {lat: lat, lng: lng},
+        map: map,
+        marker_id: i // zmiana slajdu po kliknięciu w marker
+      });
+      markers[i].addListener('click', function() {
+        flkty.selectCell(this.get('marker_id'));
+      });
+    }
+    // wycentrowanie mapy po zmianie aktywnego slajdu
+    flkty.on( 'change', function( index ) {
+      map.setCenter({lat: coordinate[index].lat, lng: coordinate[index].lng});
     });
-  } 
-}
+  }
 
 })();
