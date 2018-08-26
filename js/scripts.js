@@ -44,7 +44,7 @@
     flkty.selectCell(0);
   });
 
-  // pasek postempu
+  // pasek postępu
   var progressBar = document.querySelector('.progress-bar')
 
   flkty.on('scroll', function (progress) {
